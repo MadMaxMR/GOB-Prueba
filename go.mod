@@ -1,4 +1,4 @@
-module github.com/MadMaxMR/product-rest
+module github.com/MadMaxMR/Products-Restful
 
 go 1.18
 

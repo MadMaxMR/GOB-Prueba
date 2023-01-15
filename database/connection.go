@@ -3,17 +3,21 @@ package database
 import (
 	"log"
 
-	"github.com/MadMaxMR/product-rest/models"
+	"github.com/MadMaxMR/Products-Restful/models"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/lib/pq"
 )
 
+var host = "localhost"
+var port = "5432"
+var user = "postgres"
+var dbname = "productDB"
+var password = "123456"
+
 func Connection() *gorm.DB {
-	/*Coneccion con ElephantSQL*/
-	//connStr := "postgres://arwpboxu:qP449bZjdC9jEpih47th8Hn21yi2Aj6h@motty.db.elephantsql.com/arwpboxu"
-	/*Coneccion con Heroku*/
-	connStr := "host=localhost port=5432 user=postgres dbname=productDB password=123456 sslmode=disable"
+
+	connStr := host + " " + port + " " + user + " " + dbname + " " + password + " sslmode=disable"
 	db, err := gorm.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)

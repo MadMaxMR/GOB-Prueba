@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/MadMaxMR/product-rest/controllers"
-	"github.com/MadMaxMR/product-rest/database"
+	"github.com/MadMaxMR/Products-Restful/controllers"
+	"github.com/MadMaxMR/Products-Restful/database"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,7 +17,6 @@ func main() {
 		serverPort = defaultPort
 	}
 
-	//db := database.GetConnection()
 	database.Migrate()
 
 	r := gin.Default()

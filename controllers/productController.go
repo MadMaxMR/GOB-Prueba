@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/MadMaxMR/product-rest/database"
-	"github.com/MadMaxMR/product-rest/models"
+	"github.com/MadMaxMR/Products-Restful/database"
+	"github.com/MadMaxMR/Products-Restful/models"
 	"github.com/gin-gonic/gin"
 )
 
