@@ -30,13 +30,13 @@ func GetAll(model interface{}, page string) error {
 	}
 }
 
-func Get(model interface{}, id string) error {
+func Get(model interface{}, value string) error {
 	db := GetConnection()
 	defer db.Close()
 
-	result := db.Debug().Find(model, id)
+	result := db.Debug().First(model, value)
 	if result.RowsAffected == 0 {
-		return errors.New("No se encontro datos con el ID: " + id)
+		return errors.New("No se encontro datos con el ID: " + value)
 	}
 	return nil
 }

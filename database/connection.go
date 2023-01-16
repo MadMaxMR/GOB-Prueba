@@ -17,7 +17,7 @@ var password = "123456"
 
 func Connection() *gorm.DB {
 
-	connStr := host + " " + port + " " + user + " " + dbname + " " + password + " sslmode=disable"
+	connStr := "host = " + host + " port =" + port + " user=" + user + " dbname=" + dbname + " password=" + password + " sslmode=disable"
 	db, err := gorm.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)

@@ -4,14 +4,14 @@ import (
 	"errors"
 )
 
-func Update(modelo interface{}, id string) (mod interface{}, err error) {
+func Update(model interface{}, value string) error {
 	db := GetConnection()
 	defer db.Close()
-	err = db.Model(modelo).Where("id = ?", id).Update(modelo).Error
+	err := db.Debug().Model(model).Where(value).Update(model).Error
 
 	if err != nil {
-		return nil, errors.New("Error al actualizar - " + err.Error())
+		return errors.New("Error al actualizar - " + err.Error())
 	}
-	return modelo, nil
+	return nil
 
 }
