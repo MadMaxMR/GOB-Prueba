@@ -34,7 +34,7 @@ func Get(model interface{}, value string) error {
 	db := GetConnection()
 	defer db.Close()
 
-	result := db.Debug().First(model, value)
+	result := db.First(model, value)
 	if result.RowsAffected == 0 {
 		return errors.New("No se encontro datos con el ID: " + value)
 	}

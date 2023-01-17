@@ -56,7 +56,7 @@ _The endpoint are_
     http://localhost:8080/products/:sku
 ```
 _You can see the documentation of the endpoints in the following link:_
-* [ROME](https://documenter.getpostman.com/view/19456004/2s8ZDU6QRF)
+* [Documenter Postman](https://documenter.getpostman.com/view/19456004/2s8ZDU6QRF)
 
 ## Ejecutando las pruebas ⚙️
 

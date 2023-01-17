@@ -65,8 +65,8 @@ func CreateProduct(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error ": "image required"})
 		return
 	}
-	if file.Header.Get("Content-Type") != "image/jpeg" && file.Header.Get("Content-Type") != "image/png" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Formato invalido de imagen"})
+	if file.Header.Get("Content-Type") != "image/jpeg" && file.Header.Get("Content-Type") != "image/png" && file.Header.Get("Content-Type") != "image/jpg" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Formato invalido" + file.Header.Get("Content-Type")})
 		return
 	}
 	if err != nil {
