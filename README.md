@@ -42,6 +42,22 @@ _Then in the main folder run the command go run main.go to run the project-_
 ```
     go run main.go
 ```
+_The endpoint are_
+```
+*Create a Product* HTTP Method POST
+    http://localhost:8080/products 
+*Get a Product* HTTP Method GET
+    http://localhost:8080/products/:sku
+*Get all Products* HTTP Method GET
+    http://localhost:8080/products
+*Update a Product* HTTP Method PUT
+    http://localhost:8080/products/:sku
+*Delete a Product* HTTP Method DELETE
+    http://localhost:8080/products/:sku
+```
+_You can see the documentation of the endpoints in the following link:_
+* [ROME](https://documenter.getpostman.com/view/19456004/2s8ZDU6QRF)
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+## Ejecutando las pruebas ⚙️
 
+_Explica como ejecutar las pruebas automatizadas para este sistema_
