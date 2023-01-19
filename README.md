@@ -58,6 +58,8 @@ _The endpoint are_
 _You can see the documentation of the endpoints in the following link:_
 * [Documenter Postman](https://documenter.getpostman.com/view/19456004/2s8ZDU6QRF)
 
-## Ejecutando las pruebas ⚙️
+## Execut unit testing ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+```
+    go test ./test
+```
