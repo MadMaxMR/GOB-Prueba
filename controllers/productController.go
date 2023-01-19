@@ -66,7 +66,7 @@ func CreateProduct(c *gin.Context) {
 		return
 	}
 	if file.Header.Get("Content-Type") != "image/jpeg" && file.Header.Get("Content-Type") != "image/png" && file.Header.Get("Content-Type") != "image/jpg" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Formato invalido" + file.Header.Get("Content-Type")})
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Formato invalido-" + file.Header.Get("Content-Type")})
 		return
 	}
 	if err != nil {
@@ -204,10 +204,8 @@ func DeleteProduct(c *gin.Context) {
 	os.Remove("public/img/product/product-" + sku + "." + extension)
 
 	ruta := filepath.Join("public/otherImages", "product-"+sku+"*")
-	fmt.Print("Ruta Impresa= ", ruta)
 
 	image, err := filepath.Glob(ruta)
-	fmt.Print("Image Impresa= ", image)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
