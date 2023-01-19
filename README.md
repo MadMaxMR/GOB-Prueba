@@ -1,6 +1,6 @@
 # Products-Restful
 ***
-_This project is a exercise of a RestFull Api_
+_This project is a exercise of a RestFull Api._
 _For this project, the MVC architecture was chosen since it gives us certain advantages such as the separation of responsibilities, code reuse and greater ease to make changes as well as scalability.
 As a database manager I chose postgresql since it is an open source relational database system, known for its stability, performance and scalability, which guarantees good performance and stability in my project._
 
